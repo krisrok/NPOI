@@ -43,7 +43,7 @@ namespace NPOI.XSSF.UserModel
 
         protected CT_Chartsheet chartsheet;
 
-        protected XSSFChartSheet(PackagePart part, PackageRelationship rel)
+        internal XSSFChartSheet(PackagePart part, PackageRelationship rel)
             : base(part, rel)
         {
 

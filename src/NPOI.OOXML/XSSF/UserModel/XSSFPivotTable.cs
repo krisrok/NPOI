@@ -58,7 +58,7 @@ namespace NPOI.XSSF.UserModel
         * @param rel - the relationship of the given package part in the underlying OPC package
         */
 
-        protected XSSFPivotTable(PackagePart part, PackageRelationship rel)
+        internal XSSFPivotTable(PackagePart part, PackageRelationship rel)
             : base(part, rel)
         {
 

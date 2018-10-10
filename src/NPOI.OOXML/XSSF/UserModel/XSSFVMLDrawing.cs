@@ -93,7 +93,7 @@ namespace NPOI.XSSF.UserModel
          * @param rel  the namespace relationship holding this Drawing,
          * the relationship type must be http://schemas.Openxmlformats.org/officeDocument/2006/relationships/drawing
          */
-        protected XSSFVMLDrawing(PackagePart part, PackageRelationship rel)
+        internal XSSFVMLDrawing(PackagePart part, PackageRelationship rel)
             : base(part, rel)
         {
             Read(GetPackagePart().GetInputStream());

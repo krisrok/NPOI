@@ -15,19 +15,44 @@
    limitations under the License.
 ==================================================================== */
 
+using System;
+
+using NPOI.OpenXml4Net.OPC;
+using NPOI.Util;
+using System.Reflection;
+#if NPOI_AOT
+using NPOI.XSSF.Model;
+#endif
+
 namespace NPOI.XWPF.UserModel
 {
-    using System;
-
-    using NPOI.OpenXml4Net.OPC;
-    using NPOI.Util;
-    using System.Reflection;
-
     /**
      * @author Yegor Kozlov
      */
     public class XWPFFactory : POIXMLFactory
     {
+#if NPOI_AOT
+        static XWPFFactory()
+        {
+            try
+            {
+                new CalculationChain((PackagePart)null, (PackageRelationship)null);
+                new CommentsTable((PackagePart)null, (PackageRelationship)null);
+                new ExternalLinksTable((PackagePart)null, (PackageRelationship)null);
+                new MapInfo((PackagePart)null, (PackageRelationship)null);
+                new SharedStringsTable((PackagePart)null, (PackageRelationship)null);
+                new SingleXmlCells((PackagePart)null, (PackageRelationship)null);
+                new StylesTable((PackagePart)null, (PackageRelationship)null);
+                new ThemesTable((PackagePart)null, (PackageRelationship)null);
+                new XWPFFootnotes((PackagePart)null, (PackageRelationship)null);
+                new XWPFNumbering((PackagePart)null, (PackageRelationship)null);
+                new XWPFPictureData((PackagePart)null, (PackageRelationship)null);
+                new XWPFSettings((PackagePart)null, (PackageRelationship)null);
+                new XWPFStyles((PackagePart)null, (PackageRelationship)null);
+            }
+            catch { }
+        }
+#endif
 
         private static POILogger logger = POILogFactory.GetLogger(typeof(XWPFFactory));
 

@@ -49,7 +49,7 @@ namespace NPOI.XSSF.UserModel
         * @param rel - the relationship of the given package part in the underlying OPC package
         */
 
-        protected XSSFPivotCache(PackagePart part, PackageRelationship rel)
+        internal XSSFPivotCache(PackagePart part, PackageRelationship rel)
             : base(part, rel)
         {
 

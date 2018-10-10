@@ -73,7 +73,7 @@ namespace NPOI.XSSF.UserModel
          * @param rel  the namespace relationship holding this chart,
          * the relationship type must be http://schemas.Openxmlformats.org/officeDocument/2006/relationships/chart
          */
-        protected XSSFChart(PackagePart part, PackageRelationship rel)
+        internal XSSFChart(PackagePart part, PackageRelationship rel)
             : base(part, rel)
         {
 
